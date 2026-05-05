@@ -97,7 +97,7 @@
     document.getElementById('book-detail').style.display = 'none';
 
     try {
-      const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=' + encodeURIComponent(query) + '&langRestrict=ja&maxResults=5');
+      const res = await fetch('https://www.googleapis.com/books/v1/volumes?q=' + encodeURIComponent(query) + ''https://www.googleapis.com/books/v1/volumes?q=' + encodeURIComponent(query) + '&langRestrict=ja&maxResults=5'maxResults=8');
       const data = await res.json();
       if (!data.items || data.items.length === 0) {
         resultsEl.innerHTML = '<div class="status">見つかりませんでした。別のタイトルで試してください。</div>';
